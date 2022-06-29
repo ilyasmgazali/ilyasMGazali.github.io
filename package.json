@@ -1,0 +1,24 @@
+{
+  "name": "portfoliowebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilyasmgazali/portfoliowebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilyasmgazali/portfoliowebsite/issues"
+  },
+  "homepage": "https://github.com/ilyasmgazali/portfoliowebsite#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
+  }
+}
