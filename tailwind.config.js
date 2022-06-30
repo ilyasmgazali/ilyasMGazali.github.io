@@ -10,11 +10,21 @@ module.exports = {
     },
     borderRadius: {
       "4xl": "2.5rem",
+      "50%": "50%",
+      none: "0",
+      sm: "0.125rem",
+      DEFAULT: "0.25rem",
+      DEFAULT: "4px",
+      md: "0.375rem",
+      lg: "0.5rem",
+      full: "9999px",
+      large: "12px",
     },
     extend: {
       colors: {
         blue: "#007bff",
         grayMain: "#222222",
+        grayText: "#d5d5d5",
         indigo: "#6610f2",
         purple: "#6f42c1",
         pink: "#e83e8c",
