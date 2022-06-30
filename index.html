@@ -10,7 +10,7 @@
   </head>
   <!-- Body -->
   <body class="bg-blue">
-    <!-- Page Loader -->
+    <!-- Page Loader/Spinner -->
     <div class="animation-container">
       <div class="circle">
         <div class="loader">
@@ -24,6 +24,7 @@
     </div>
     <script>
       window.addEventListener("load", () => {
+        // ---- select html element
         const loader = document.querySelector(".animation-container");
 
         // ------ Wait Function
@@ -37,10 +38,10 @@
         console.log("Executed now");
         wait(1000);
 
-        // ---- Activate hidden classs
+        // ---- Activate '--hidden' css classs
         loader.classList.add("animation-container--hidden");
 
-        // -- remove
+        // -- remove the html element, on listen
         loader.addEventListener("transitionend", () => {
           document.body.removeChild(loader);
         });
@@ -78,7 +79,7 @@
       <!-- Image and About section -->
       <section>
         <div
-          class="flex flex-row gap-8 items-center justify-center my-12 text-white max-auto"
+          class="flex flex-row gap-8 items-center justify-center my-12 text-white max-auto transform"
         >
           <div class="w-80">
             <img src="img/IMG_3215-modified.png" alt="" class="" />
@@ -112,10 +113,10 @@
           </div>
         </div>
       </section>
-      <!-- Container what I do container -->
+      <!-- Container 'what I do' container -->
       <section class="py-20 pl">
         <!-- What I do Title 
-                                    note: potision relaitve/absolute
+                                    note: potision relaitve/absolute for bar
         -->
         <div class="flex flex-col pl-16">
           <div class="ml-0">
