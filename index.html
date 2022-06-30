@@ -5,10 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/src/animation.css" />
     <title>Ilyas Portfolio Page</title>
   </head>
   <!-- Body -->
   <body class="bg-blue">
+    <!-- Page Loader -->
+    <div class="animation-container">
+      <div class="circle">
+        <div class="loader">
+          <div class="loader">
+            <div class="loader">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".animation-container");
+
+        // ------ Wait Function
+        var wait = (ms) => {
+          const start = Date.now();
+          let now = start;
+          while (now - start < ms) {
+            now = Date.now();
+          }
+        };
+        console.log("Executed now");
+        wait(1000);
+
+        // ---- Activate hidden classs
+        loader.classList.add("animation-container--hidden");
+
+        // -- remove
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild(loader);
+        });
+      });
+    </script>
+
     <!-- Wrapper for body wrapper -->
     <div
       class="w-11/12 max-w-7xl bg-grayMain rounded-4xl shadow-2xl pb-96 mx-auto mt-9"
@@ -62,12 +100,12 @@
             <div class="flex gap-2">
               <a
                 href="#"
-                class="p-3 px-6 pt-2 rounded-full border-2 border-blue bg-grayDark"
+                class="p-3 px-6 pt-2 rounded-full border-2 border-blue bg-grayDark hover:bg-blue"
                 >Download CV</a
               >
               <a
                 href=""
-                class="p-3 px-6 pt-2 rounded-full border-2 border-white bg-grayDark"
+                class="p-3 px-6 pt-2 rounded-full border-2 border-white bg-grayDark hover:bg-white hover:text-grayMain"
                 >Contact</a
               >
             </div>
@@ -76,7 +114,9 @@
       </section>
       <!-- Container what I do container -->
       <section class="py-20 pl">
-        <!-- What I do Title -->
+        <!-- What I do Title 
+                                    note: potision relaitve/absolute
+        -->
         <div class="flex flex-col pl-16">
           <div class="ml-0">
             <h2 class="text-2xl text-white">What I Do</h2>
