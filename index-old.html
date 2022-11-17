@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/src/animation.css" />
+    <title>Ilyas Portfolio Page</title>
+  </head>
+
+  <!-- Notes: My tailwind convention on line below  -->
+  <!-- font, width/height, padding then margin  -->
+
+  <!-- Body -->
+  <body class="bg-grayMain sm:bg-blue">
+    <!-- Page Loader/Spinner -->
+    <div class="animation-container">
+      <div class="circle">
+        <div class="loader">
+          <div class="loader">
+            <div class="loader">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        // ---- select html element
+        const loader = document.querySelector(".animation-container");
+
+        // ------ Wait Function
+        var wait = (ms) => {
+          const start = Date.now();
+          let now = start;
+          while (now - start < ms) {
+            now = Date.now();
+          }
+        };
+        console.log("Executed now");
+        wait(1000);
+
+        // ---- Activate '--hidden' css classs
+        loader.classList.add("animation-container--hidden");
+
+        // -- remove the html element, on listen
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild(loader);
+        });
+      });
+    </script>
+
+    <!-- Wrapper for body wrapper/container -->
+    <div
+      class="w-full h-full bg-grayMain pb-96 mx-auto mt-0 lg:rounded-4xl lg:shadow-2xl lg:mt-9 lg:w-11/12 lg:max-w-7xl"
+    >
+      <!-- Nav Flex Container -->
+      <nav class="flex flex-row justify-between p-16">
+        <!-- Logo -->
+        <div class="flex pr-4">
+          <p
+            class="font-bold tracking-tighter text-xl rounded-4xl text-white bg-blue px-4 py-2 -mt-2 mr-2"
+          >
+            I G
+          </p>
+          <p class="text-xl text-white">
+            Ilyas <span class="font-bold">Gazali</span>
+          </p>
+        </div>
+        <!-- Menu Items -->
+        <div class="hidden gap-12 text-sm text-gray md:flex">
+          <a href="" class="flex text-white hover:text-"
+            >About me <span class="text-2xl -mt-2">⌄</span></a
+          >
+          <a href="" class="hover:text-white">Resume</a>
+          <a href="" class="hover:text-white">Portfolio</a>
+          <a href="" class="hover:text-white">Blog</a>
+          <a href="" class="hover:text-white">Contact</a>
+        </div>
+      </nav>
+
+      <!-- Image and About section -->
+      <section class="px-16 sm:px-0">
+        <div
+          class="flex flex-col gap-8 items-center justify-center text-white my-12 max-auto md:flex-row"
+        >
+          <div class="w-80">
+            <!-- Image My Face --->
+            <img src="img/IMG_3215-modified.png" alt="" class="" />
+          </div>
+          <div class="flex flex-col gap-5 max-w-md">
+            <div>
+              <p class="text-grayText">Web Developer</p>
+              <h1 class="text-6xl font-bold pw-100 text-white">
+                Ilyas Mohamed Gazali
+              </h1>
+            </div>
+            <p class="text-sm text-grayText">
+              My name is Ilyas Mohamed Gazali. I have a MSc Sofftware
+              Engineering degree with a Computer Science BSc. I started my
+              career doing an internship at Google and went on to a start-up,
+              TAKEMOREPHOTOS. I am passionate about web developmet. Welcome to
+              my portfolio website.
+            </p>
+            <div class="flex gap-2">
+              <a
+                href="#"
+                class="p-3 px-6 pt-2 rounded-full border-2 border-blue bg-grayDark hover:bg-blue"
+                >Download CV</a
+              >
+              <a
+                href=""
+                class="p-3 px-6 pt-2 rounded-full border-2 border-white bg-grayDark hover:bg-white hover:text-grayMain"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="animate-bounce text-4xl">Welcome to my site...</div>
+
+      <!-- Container 'what I do' container -->
+      <section class="py-16">
+        <!-- What I do Title 
+                                    note: potision relaitve/absolute for bar
+        -->
+        <div class="flex flex-col mx-auto px-16">
+          <div class="md:ml-0">
+            <h2 class="text-2xl text-white">What I Do</h2>
+          </div>
+          <div class="w-6 px-8 py-0 mt-1 bg-blue">
+            <div class="w-24 px-6 pt-px bg-gray"></div>
+          </div>
+        </div>
+
+        <!-- TEST List Items Row 111111111111111 -->
+        <div class="px-16">
+          <!-- Item 1 -->
+          <div class="">
+            <div class="">
+              <img src="img/user_icon.svg" class="w-20" />
+            </div>
+            <div class="">
+              <p class="text-grayText">
+                I enjoy collaborating and working with others to complete tasks
+                and projects. Teamwork skills and experience make it a much
+                better experience for everyone on the team.
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="">
+            <div>
+              <img src="img/setting_tools_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText">
+                Programming is a continuously changing and evolving industry.
+                Every day different languages become more popular and tools
+                change. In order to grow within the industry, continous learning
+                is important.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- TEST List Items Row 2222222222222 -->
+        <div class="px-16 py-6 flex flex-col md:flex-row">
+          <!-- Item 1 -->
+          <div class="flex flex-row md:w-1/2">
+            <div class="w-2/10">
+              <img src="img/pencil_icon.svg" class="w-20" />
+            </div>
+            <div class="w-8/10">
+              <p class="text-grayText">
+                I enjoy writing code The sense of accomplishment when solving a
+                really complicated problem cannot be beat!
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex md:w-1/2">
+            <div>
+              <img src="img/monitor_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText w-10/12">
+                Development helps you accomplish innovative projects and make
+                you a valuable asset to the company. You can visualize and
+                understand the risk and challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEST List Items Row 333333333s -->
+        <div class="flex flex-col md:flex-row p-16 pt-1">
+          <!-- Item 1 -->
+          <div class="flex flex-row gap-5 md:gap-5 md:w-1/2">
+            <div>
+              <img src="img/user_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText md:w-10/12">
+                I enjoy collaborating and working with others to complete tasks
+                and projects. Teamwork skills and experience make it a much
+                better experience for everyone on the team.
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex flex-row gap-5 md:w-1/2">
+            <div>
+              <img src="img/setting_tools_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText w-10/12">
+                Programming is a continuously changing and evolving industry.
+                Every day different languages become more popular and tools
+                change. In order to grow within the industry, continous learning
+                is important.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEST List Items Row 44444444444 -->
+        <div class="flex flex-col md:flex-row p-16 pt-1">
+          <!-- Item 1 -->
+          <div class="flex flex-row gap-5 md:gap-5 md:w-1/2">
+            <div>
+              <img src="img/pencil_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText md:w-10/12">
+                I enjoy writing code The sense of accomplishment when solving a
+                really complicated problem cannot be beat!
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex flex-row gap-5 md:w-1/2">
+            <div>
+              <img src="img/monitor_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText w-10/12">
+                Development helps you accomplish innovative projects and make
+                you a valuable asset to the company. You can visualize and
+                understand the risk and challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- List Items Row 1 ---->
+        <div
+          class="flex flex-col items-center justify-center px-16 pt-10 md:px-16 md:flex-row"
+        >
+          <!-- Item 1 -->
+          <div class="flex flex-row justify-center gap-5 w-1/2">
+            <div>
+              <img src="img/pencil_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText w-10/12">
+                I enjoy writing code The sense of accomplishment when solving a
+                really complicated problem cannot be beat!
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex flex-row justify-center gap-5 w-1/2">
+            <div>
+              <img src="img/monitor_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText w-10/12">
+                Development helps you accomplish innovative projects and make
+                you a valuable asset to the company. You can visualize and
+                understand the risk and challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- List Items Row 2 -->
+        <div class="flex flex-col md:flex-row pt-10 p-16">
+          <!-- Item 1 -->
+          <div class="flex flex-row gap-5 w-1/2">
+            <div>
+              <img src="img/user_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText w-10/12">
+                I enjoy collaborating and working with others to complete tasks
+                and projects. Teamwork skills and experience make it a much
+                better experience for everyone on the team.
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex flex-row gap-5 w-1/2">
+            <div>
+              <img src="img/setting_tools_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText w-10/12">
+                Programming is a continuously changing and evolving industry.
+                Every day different languages become more popular and tools
+                change. In order to grow within the industry, continous learning
+                is important.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEST List Items Row 333333333s -->
+        <div class="flex flex-col md:flex-row md:pt-10 md:p-16">
+          <!-- Item 1 -->
+          <div class="flex flex-row gap-5 w-1/2">
+            <div>
+              <img src="img/user_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText w-10/12">
+                I enjoy collaborating and working with others to complete tasks
+                and projects. Teamwork skills and experience make it a much
+                better experience for everyone on the team.
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex flex-row gap-5 w-1/2">
+            <div>
+              <img src="img/setting_tools_icon.svg" class="w-20" />
+            </div>
+            <div>
+              <p class="text-grayText w-10/12">
+                Programming is a continuously changing and evolving industry.
+                Every day different languages become more popular and tools
+                change. In order to grow within the industry, continous learning
+                is important.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-16 py-16">
+        <div class="flex gap-2 bg-slate-500 px-4 py-4">
+          <img class="w-10" src="img/pencil_icon.svg" class="w-20" />
+          <div>
+            I enjoy writing code The sense of accomplishment when solving a
+            really complicated problem cannot be beat!
+          </div>
+        </div>
+        <div class="flex gap-2 bg-slate-500 px-4 py-4">
+          <img class="w-10" src="img/monitor_icon.svg" class="w-20" />
+          <div>
+            Programming is a continuously changing and evolving industry. Every
+            day different languages become more popular and tools change. In
+            order to grow within the industry, continous learning is important.
+          </div>
+        </div>
+        <div class="flex gap-2 bg-slate-500 px-4 py-4">
+          <img class="w-10" src="img/user_icon.svg" class="w-20" />
+          <div>
+            Development helps you accomplish innovative projects and make you a
+            valuable asset to the company. You can visualize and understand the
+            risk and challenges.
+          </div>
+        </div>
+        <div class="flex gap-2 bg-slate-500 px-4 py-4">
+          <img class="w-10" src="img/setting_tools_icon.svg" class="w-20" />
+          <div>
+            I enjoy collaborating and working with others to complete tasks and
+            projects. Teamwork skills and experience make it a much better
+            experience for everyone on the team.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
