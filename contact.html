@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/src/animation.css" />
+    <title>Ilyas Portfolio Page</title>
+  </head>
+
+  <!-- Notes: My tailwind convention on line below  -->
+  <!-- font, width/height, padding then margin  -->
+
+  <!-- Body -->
+  <body class="bg-grayMain sm:bg-blue">
+    <!-- Page Loader/Spinner -->
+    <div class="animation-container">
+      <div class="circle">
+        <div class="loader">
+          <div class="loader">
+            <div class="loader">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        // ---- select html element
+        const loader = document.querySelector(".animation-container");
+
+        // ------ Wait Function
+        var wait = (ms) => {
+          const start = Date.now();
+          let now = start;
+          while (now - start < ms) {
+            now = Date.now();
+          }
+        };
+        console.log("Executed now");
+        wait(1000);
+
+        // ---- Activate '--hidden' css classs
+        loader.classList.add("animation-container--hidden");
+
+        // -- remove the html element, on listen
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild(loader);
+        });
+      });
+    </script>
+
+    <!-- Wrapper for body wrapper/container -->
+    <div
+      class="w-full h-full bg-grayMain mx-auto mt-0 lg:rounded-4xl lg:shadow-2xl lg:mt-9 lg:mb-9 lg:w-11/12 lg:max-w-7xl"
+    >
+      <!-- Nav Flex Container -->
+      <nav class="flex flex-row justify-between p-16">
+        <!-- Logo -->
+        <div class="flex pr-4">
+          <p
+            class="font-bold tracking-tighter text-xl rounded-4xl text-white bg-blue px-4 py-2 -mt-2 mr-2"
+          >
+            I G
+          </p>
+          <p class="text-xl text-white">
+            Ilyas <span class="font-bold">Gazali</span>
+          </p>
+        </div>
+        <!-- Menu Items -->
+        <div class="hidden gap-12 text-sm text-gray md:flex">
+          <a href="./index.html" class="flex hover:text-gray"
+            >About me</a
+          >
+          <a href="./resume.html" class="hover:text-white">Resume</a>
+          <a href="./portfolio.html" class="flex text-white hover:text-white"
+          >Portfolio<span class="text-2xl -mt-2">⌄</span></a
+          >
+          <a href="" class="hover:text-white">Blog</a>
+          <a href="./contact.html" class="hover:text-white">Contact</a>
+        </div>
+      </nav>
+
+
+
+      <!-- Section - Portfolio Title -->
+      <section>
+        <!-- Section - Portfolio Title -->
+        <div class=" bg-dark flex place-content-between mt-0 py-16 px-16 text-grayText text-sm border-t border-gray border-opacity-50">
+          <h1 class="text-white text-5xl">Contact</h1>
+          <div>My contact details</div>
+        </div>
+        <!-- Section - Portfolio Body -->
+        <footer class="flex place-content-between py-4 px-6 text-grayText text-sm border-t border-gray border-opacity-50">
+          <a href="" class="text-gray hover:text-white">Body</a>
+          <div>Placeholder</div>
+        </footer>
+      </section>
+
+
+      <!-- Footer -->
+      <div class="flex place-content-between mt-10 py-4 px-16 text-grayText text-sm border-t border-gray border-opacity-50">
+        <a href="" class="text-gray hover:text-white">LinkedIn</a>
+        <div>Created with TailwindCSS Tailwind. Version 1</div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
